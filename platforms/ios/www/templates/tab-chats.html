@@ -1,0 +1,25 @@
+<ion-view view-title="在线课堂">
+  <ion-content>
+    <!--<ion-list>-->
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">-->
+        <!--<img ng-src="{{chat.face}}">-->
+        <!--<h2>{{chat.name}}</h2>-->
+        <!--<p>{{chat.lastText}}</p>-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+
+        <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+          <!--Delete-->
+        <!--</ion-option-button>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+    <div class="bar bar-stable">
+      <div style="margin: auto">
+        <a class="button button-positive" style="margin-right: 20px" ng-click="getCourse(0)">公开课</a>
+        <a class="button button-positive" ng-click="getCourse(1)">学校课</a>
+      </div>
+    </div>
+    <div style="position: relative; top: 50px;">
+      <ion-item ng-repeat="course in courses" href="#/tab/playMedia" ng-click="setUrl(course.url)">{{course.title}}</ion-item>
+    </div>
+  </ion-content>
+</ion-view>
